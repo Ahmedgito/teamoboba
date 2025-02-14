@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebookF, FaTwitter, FaTiktok } from "react-icons/fa";
 
 const SocialSidebar = () => {
   return (
-    <div className="fixed right-0 top-1/3 transform -translate-y-1/2 flex flex-col space-y-4 bg-white p-5 rounded-l-2xl shadow-lg">
+    <div className="hidden md:flex fixed right-0 top-1/3 transform -translate-y-1/2  flex-col space-y-4 bg-white p-5 rounded-l-2xl shadow-lg">
       <a
         href="https://instagram.com"
         target="_blank"
