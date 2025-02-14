@@ -11,10 +11,10 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full bg-white shadow-md">
+    <header className="w-full bg-transparent ">
       {/* Mobile Header */}
       <div className="md:hidden flex justify-between items-center px-6 py-4">
-        <img src={logo} alt="Fatbee Logo" className="w-20 h-20" />
+        <img src={logo} alt="Fatbee Logo" className="w-32 h-32" />
         <button onClick={toggleMenu}>
           {isMobileOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
@@ -22,7 +22,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMobileOpen && (
-        <div className="md:hidden flex flex-col items-center bg-white py-4 space-y-2 shadow-md">
+        <div className="md:hidden flex flex-col items-center bg-white py-4 space-y-5 shadow-md">
           <Button text="HOME" />
           <Button text="ONLINE ORDERING" />
           <Button text="MENU" />
@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex space-x-4">
+        <div className="flex space-x-5 space-y-2">
           <Button text="HOME" />
           <Button text="ONLINE ORDERING" />
           <Button text="MENU" />
