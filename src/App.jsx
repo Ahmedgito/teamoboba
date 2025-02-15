@@ -4,6 +4,7 @@ import './App.css'
 import Section1 from './Section1'
 import Navbar from './Navbar'
 import SocialSidebar from './components/Sidebar'
+import MenuGrid from './Section2'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Navbar/>
       <Section1 />
       <SocialSidebar />
+      <MenuGrid/>
     </>
   )
 }
