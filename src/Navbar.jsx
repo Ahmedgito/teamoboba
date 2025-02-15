@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full bg-transparent ">
+    <header className="w-full bg-transparent  ">
       {/* Mobile Header */}
       <div className="md:hidden flex justify-between items-center px-6 py-4">
         <img src={logo} alt="Fatbee Logo" className="w-32 h-32" />
@@ -22,7 +22,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMobileOpen && (
-        <div className="md:hidden flex flex-col items-center bg-white py-4 space-y-5 shadow-md">
+        <div className="md:hidden flex flex-col items-center bg-[#f6dbbf] py-4 space-y-5 shadow-md">
           <Button text="HOME" />
           <Button text="ONLINE ORDERING" />
           <Button text="MENU" />
