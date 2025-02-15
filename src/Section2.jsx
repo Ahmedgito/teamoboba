@@ -28,7 +28,7 @@ const MenuGrid = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-[30rem] object-contain rounded-lg shadow-md hover:scale-105 transition-transform"
+                className="w-full md:h-[30rem] h-72 md:object-contain md:rounded-lg md:shadow-md hover:scale-105 md:transition-transform"
                 onClick={() => setSelectedImage(image.src)}
               />
             </div>
