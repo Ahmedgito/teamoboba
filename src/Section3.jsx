@@ -22,7 +22,7 @@ const Section3 = () => {
         </h2>
 
  {/* Card Section - added below the existing text section */}
- <div className="mt-3 mb-5 flex justify-start">
+ <div className="mt-3 mb-5 flex md:justify-start justify-center">
           <Card />
         </div>
 

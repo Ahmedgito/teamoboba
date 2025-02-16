@@ -4,7 +4,7 @@ import NButton from './components/NButton';
 
 const Section1 = () => {
   return (
-    <div className="relative flex justify-center m-auto mt-0 md:w-[1100px] md:h-[600px]">
+    <div className="relative flex justify-center m-auto mt-5 md:w-[1100px] md:h-[600px]">
       {/* Header Image */}
       <img src={header} alt="Header" className="w-full h-auto md:w-[1100px] md:h-[600px]" />
 
