@@ -71,8 +71,6 @@ const Footer = () => {
   return (
     <footer className="bg-[#f6dbbf] border-t-3 border-t-[#4b2b1c] text-[#4b2b1c] py-12 mt-8">
       <div className="max-w-6xl mx-auto px-6 text-center">
-       
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
           {locations.map((location, index) => (
             <div key={index}>
@@ -81,9 +79,15 @@ const Footer = () => {
               <p><span className="font-semibold">Store Hours:</span> {location.storeHours}</p>
               <p><span className="font-semibold">Gmail:</span> {location.email}</p>
               <p><span className="font-semibold">Tel:</span> {location.phone}</p>
+
+              {/* Social media icons with circles */}
               <div className="flex gap-4 mt-3">
-                <FaFacebookF className="text-xl cursor-pointer" />
-                <FaInstagram className="text-xl cursor-pointer" />
+                <div className="w-10 h-10 bg-[#A0522D] text-white flex justify-center items-center rounded-full">
+                  <FaFacebookF className="text-xl cursor-pointer" />
+                </div>
+                <div className="w-10 h-10 bg-[#A0522D] text-white flex justify-center items-center rounded-full">
+                  <FaInstagram className="text-xl cursor-pointer" />
+                </div>
               </div>
             </div>
           ))}
