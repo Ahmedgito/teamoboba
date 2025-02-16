@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react"; // Mobile icons
-import logo from "./assets/logoo.png";
+import logo from "./assets/logoo.webp";
 import Button from "./components/Button"; // Importing Button Component
 
 const Navbar = () => {

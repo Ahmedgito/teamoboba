@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import pg1 from "./assets/pg1.jpg";
-import pg2 from "./assets/pg2.jpg";
-import pg3 from "./assets/pg3.jpg";
-import pg4 from "./assets/pg4.jpg";
+import pg1 from "./assets/pg1.webp";
+import pg2 from "./assets/pg2.webp";
+import pg3 from "./assets/pg3.webp";
+import pg4 from "./assets/pg4.webp";
 
 const menuImages = [
   { id: 1, src: pg1, alt: "Menu 1" },
@@ -20,15 +20,15 @@ const MenuGrid = () => {
         OUR MENU
       </h1>
 
-      <div className="container mx-auto px-4 md:py-7 py-3">
+      <div className="container mx-auto px-4 md:py-7 py-3 max-w-[850px]">
         {/* Grid Layout */}
-        <div className="grid grid-cols-2 gap-1">
+        <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
           {menuImages.map((image) => (
             <div key={image.id} className="cursor-pointer">
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full md:h-[30rem] h-72 md:object-contain md:rounded-lg md:shadow-md hover:scale-105 md:transition-transform"
+                className="w-full h-auto object-contain rounded-lg shadow-md hover:scale-105 transition-transform"
                 onClick={() => setSelectedImage(image.src)}
               />
             </div>
@@ -59,4 +59,3 @@ const MenuGrid = () => {
 };
 
 export default MenuGrid;
-
