@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useInView } from "react-intersection-observer"; // Import the hook for Intersection Observer
 import pg1 from "./assets/pg1.webp";
 import pg2 from "./assets/pg2.webp";
 import pg3 from "./assets/pg3.webp";
@@ -14,6 +15,12 @@ const menuImages = [
 const MenuGrid = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
+  // Intersection observer hook to animate images when they come into the viewport
+  const { ref: gridRef, inView: gridInView } = useInView({
+    triggerOnce: true, // Trigger once
+    threshold: 0.1, // 50% of the element should be in view
+  });
+
   return (
     <>
       <h1 className="text-center text-[#4b2b1c] text-xl md:text-4xl mt-8 font-bold">
@@ -22,13 +29,18 @@ const MenuGrid = () => {
 
       <div className="container mx-auto px-4 md:py-7 py-3 max-w-[850px]">
         {/* Grid Layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div
+          ref={gridRef}
+          className={`grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 transition-opacity duration-1000 ${
+            gridInView ? "opacity-100" : "opacity-0"
+          }`}
+        >
           {menuImages.map((image) => (
             <div key={image.id} className="cursor-pointer">
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-auto object-contain rounded-lg shadow-md hover:scale-105 transition-transform"
+                className="w-full h-auto object-contain rounded-lg shadow-md transition-transform hover:scale-105"
                 onClick={() => setSelectedImage(image.src)}
               />
             </div>
