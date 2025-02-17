@@ -63,11 +63,11 @@ const Navbar = () => {
           <Link to="home" smooth={true} duration={500}>
             <Button text="HOME" />
           </Link>
-          <Link to="online-ordering" smooth={true} duration={500}>
-            <Button text="ONLINE ORDERING" />
-          </Link>
           <Link to="menu" smooth={true} duration={500}>
             <Button text="MENU" />
+          </Link>
+          <Link to="online-ordering" smooth={true} duration={500}>
+            <Button text="ONLINE ORDERING" />
           </Link>
           <Link to="career" smooth={true} duration={500}>
             <Button text="CAREER" />
