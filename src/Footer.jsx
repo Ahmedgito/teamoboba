@@ -1,96 +1,43 @@
 import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import logo from "./assets/logoo.webp";
 
 const Footer = () => {
-  const locations = [
-    {
-      city: "Overland Park",
-      address: "6936 W 135th St, Overland Park, KS 66223",
-      storeHours: "Open Daily, 11AM-9PM",
-      email: "fatbeecafekc@gmail.com",
-      phone: "(913) 242-7892",
-    },
-    {
-      city: "Downtown Kansas City",
-      address: "1111 Main St Ste 165, Kansas City, MO 64106",
-      storeHours: "Open Daily, 11AM-9PM",
-      email: "fatbeecafedowntownkc@gmail.com",
-      phone: "(913) 991-6242",
-    },
-    {
-      city: "Lee's Summit",
-      address: "880 NW Blue Pkwy, Lee’s Summit, MO 64086",
-      storeHours: "Open Daily, 10:30AM-9PM",
-      email: "fatbeeleessummit@gmail.com",
-      phone: "(214) 622-1851",
-    },
-    {
-      city: "Strongsville, Ohio",
-      address: "14405 Pearl Rd, Strongsville, OH 44136",
-      storeHours: "Open Daily, 11AM-9PM",
-      email: "fatbeecafeohiocleveland@gmail.com",
-      phone: "(440) 268-6252",
-    },
-    {
-      city: "Colorado Springs",
-      address: "3230 Centennial Blvd, Colorado Springs, CO 80907",
-      storeHours: "Open Daily, 11AM-9PM",
-      email: "fatbeecafecoloradollc@gmail.com",
-      phone: "(719) 471-4187",
-    },
-    {
-      city: "Chouteau, Missouri",
-      address: "4307 Chouteau Trafficway, Kansas City, MO 64117",
-      storeHours: "Open Daily, 11AM-9PM",
-      email: "fatbeenorthkc@gmail.com",
-      phone: "+1 816-997-9033",
-    },
-    {
-      city: "Gardner, Kansas",
-      address: "Moonlight Shopping Center 800 E Main St, Gardner, KS 66030",
-      storeHours: "Open Daily, 11AM-9PM",
-      email: "fatbeecafegardnerks@gmail.com",
-      phone: "+1 913-605-1104",
-    },
-    {
-      city: "Shawnee Mission",
-      address: "13223 Shawnee Mission Pkwy, Shawnee, KS 66216",
-      storeHours: "Open Daily, 11AM-9PM",
-      email: "fatbeeshawnee@gmail.com",
-      phone: "+1 913-318-0679",
-    },
-    {
-      city: "Everett, Washington",
-      address: "1523 132ND ST SE STE B-2, Everett, WA",
-      storeHours: "Open Daily, 11AM-9PM",
-      email: "fatbeeverett@gmail.com",
-      phone: "+1 (425) 225-5799",
-    },
-  ];
-
   return (
-    <footer className="bg-[#f6dbbf] border-t-3 border-t-[#4b2b1c] text-[#4b2b1c] py-12 mt-8">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-          {locations.map((location, index) => (
-            <div key={index}>
-              <h3 className="font-bold text-lg">{location.city}</h3>
-              <p><span className="font-semibold">Address:</span> {location.address}</p>
-              <p><span className="font-semibold">Store Hours:</span> {location.storeHours}</p>
-              <p><span className="font-semibold">Gmail:</span> {location.email}</p>
-              <p><span className="font-semibold">Tel:</span> {location.phone}</p>
+    <footer className="bg-[#f6dbbf] border-t-[3px] border-t-[#4b2b1c] text-[#4b2b1c] py-10 mt-8">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          {/* Logo Section */}
+          <div className="flex flex-col items-center md:items-start">
+            <img src={logo} alt="Company Logo" className="w-32 h-auto mb-4" />
+            <p className="text-sm">&copy; {new Date().getFullYear()} Boba Cafe. All rights reserved.</p>
+          </div>
 
-              {/* Social media icons with circles */}
-              <div className="flex gap-4 mt-3">
-                <div className="w-10 h-10 bg-[#A0522D] text-white flex justify-center items-center rounded-full">
-                  <FaFacebookF className="text-xl cursor-pointer" />
-                </div>
-                <div className="w-10 h-10 bg-[#A0522D] text-white flex justify-center items-center rounded-full">
-                  <FaInstagram className="text-xl cursor-pointer" />
-                </div>
-              </div>
+          {/* Address Section */}
+          <div className="text-center md:text-center">
+            <h3 className="font-bold text-lg">LOCATION  </h3>
+            <p><span className="font-semibold">Address:</span> Stanley Square Shopping Center, 7932 W 151st Street, Overland Park, KS 66223</p>
+            <p><span className="font-semibold">Store Hours:</span> Open Daily, 11AM-9PM</p>
+            <p><span className="font-semibold">Email:</span> <a href="mailto:teamobobacafe@gmail.com" className="underline">teamobobacafe@gmail.com</a></p>
+            <p><span className="font-semibold">Tel:</span> <a href="tel:+19132427892" className="underline">(913) 242-7892</a></p>
+          </div>
+
+          {/* Social Media Section */}
+          <div className="flex flex-col items-center md:items-end">
+            <h3 className="font-bold text-lg mb-2">Follow Us</h3>
+            <div className="flex gap-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
+                 className="w-10 h-10 bg-[#A0522D] text-white flex justify-center items-center rounded-full hover:bg-[#8B4513] transition-all" 
+                 aria-label="Facebook">
+                <FaFacebookF className="text-xl" />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
+                 className="w-10 h-10 bg-[#A0522D] text-white flex justify-center items-center rounded-full hover:bg-[#8B4513] transition-all" 
+                 aria-label="Instagram">
+                <FaInstagram className="text-xl" />
+              </a>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </footer>
